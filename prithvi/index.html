@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodExpress - Indian Food Delivery</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">FoodExpress</div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for dishes...">
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#restaurants">Restaurants</a>
+        <a href="#menu">Menu</a>
+        <div class="cart-icon" id="cartIcon">
+          🛒 <span class="cart-count">0</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero" id="home">
+      <div class="hero-content">
+        <h1>Authentic Indian Food Delivered</h1>
+        <p>From street food to fine dining, delivered to your doorstep</p>
+        <button class="cta-button">Order Now</button>
+      </div>
+    </div>
+
+    <section id="restaurants" class="restaurants">
+      <h2>Top Rated Restaurants</h2>
+      <div class="restaurant-grid" id="restaurantGrid"></div>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <h2>Popular Dishes</h2>
+      <div class="filter-container">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="Breakfast">Breakfast</button>
+        <button class="filter-btn" data-category="Main Course">Main Course</button>
+        <button class="filter-btn" data-category="Snacks">Snacks</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <span class="close-cart" onclick="document.getElementById('cartModal').classList.remove('active')">×</span>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+          <span>Total Amount:</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button class="checkout-button">Proceed to Checkout</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FoodExpress</h3>
+          <p>Delivering happiness to your doorstep</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#restaurants">Restaurants</a>
+          <a href="#menu">Menu</a>
+          <a href="#">About Us</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: foodexpress@gamial.com</p>
+          <p>Phone: +91 7999033293</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
